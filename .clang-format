@@ -1,0 +1,75 @@
+BasedOn: LLVM
+Language: Cpp
+
+ColumnWidth: 80
+IndentWidth: 4
+ContinuationIndentWidth: 4
+TabWidth: 4
+UseTabs: Never
+
+# AccessModifierOffset: -2
+
+AlignAfterOpenBracket: BlockIndent
+AlignArrayOfStructures: Right
+
+AllowShortBlocksOnASingleLine: Empty
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AlwaysBreakTemplateDeclarations: true
+
+BinPackArguments: false
+BinPackParameters: false
+
+BreakAfterAttributes: Always
+BreakBeforeBinaryOperators: NonAssignment
+# BreakBeforeBraces: Attach
+# BreakBeforeTernaryOperators: true
+# BreakTemplateDeclarations: Yes
+
+# FixNamespaceComments: true
+
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: "^<.*>"
+    Priority: 2
+    CaseSensitive: false
+  - Regex: ".*"
+    Priority: 1
+    CaseSensitive: false
+
+IndentCaseLabels: true
+IndentPPDirectives: BeforeHash
+
+# InsertNewlineAtEOF: true
+
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+# MaxEmptyLinesToKeep: 1
+
+# NamespaceIndentation: Inner ?
+
+PackConstructorInitializers: Never
+
+PointerAlignment: Left
+QualifierAlignment: Left
+ReferenceAlignment: Pointer
+
+# ReflowComments: false
+
+SeparateDefinitionBlocks: Always
+
+SortIncludes: CaseInsensitive
+
+# SpaceAfterCStyleCast: false
+# SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+# SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: true
+# SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: false
+# SpaceBeforeParens: ControlStatements
+# SpaceBeforeRangeBasedForLoopColon: true
+SpacesBeforeTrailingComments: 2
+# SpacesInAngles: Never
+# SpacesInParens: Never
+# SpacesInSquareBrackets: false
