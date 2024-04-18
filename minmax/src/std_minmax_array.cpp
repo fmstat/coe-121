@@ -5,17 +5,19 @@ int main() {
     std::cout << "Minimum and maximum elements of array\n";
     std::cout << "Standard library implementation\n\n";
 
+    // Create array
     const int SIZE = 5;
     int nums[SIZE];
 
     std::cout << "Array size: " << SIZE << "\n\n";
 
+    // Ask user for integers
     for (int i = 0; i < SIZE; ++i) {
         std::cout << "Enter an integer: ";
         std::cin >> nums[i];
     }
 
-    // Display element
+    // Display array
     std::cout << "\n[";
     for (int i = 0; i < SIZE; ++i) {
         std::cout << nums[i];
@@ -24,12 +26,15 @@ int main() {
     }
     std::cout << "]\n\n";
 
+    // Alternate method:
     // int min = *std::min_element(nums, nums + SIZE);
     // int max = *std::max_element(nums, nums + SIZE);
     // std::cout << "Min: " << min << '\n';
     // std::cout << "Max: " << max << '\n';
 
+    // Get minimum and maximum element
     auto [min, max] = std::minmax_element(nums, nums + SIZE);
+
     std::cout << "Min: " << *min << '\n';
     std::cout << "Max: " << *max << '\n';
 }
