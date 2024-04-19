@@ -36,6 +36,10 @@ int main() {
         if (num > max)
             max = num;
 
+        // Alternate method:
+        // min = std::min(nums, min);
+        // max = std::max(nums, max);
+
         // Display element
         std::cout << num;
         if (i < nums.size() - 1)

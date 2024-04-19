@@ -32,14 +32,14 @@ int main() {
     }
     std::cout << "]\n\n";
 
+    // Get minimum and maximum element
+    auto [min, max] = std::minmax_element(nums.begin(), nums.end());
+
     // Alternate method:
     // int min = *std::min_element(nums.begin(), nums.end());
     // int max = *std::max_element(nums.begin(), nums.end());
     // std::cout << "Min: " << min << '\n';
     // std::cout << "Max: " << max << '\n';
-
-    // Get minimum and maximum element
-    auto [min, max] = std::minmax_element(nums.begin(), nums.end());
 
     std::cout << "Min: " << *min << '\n';
     std::cout << "Max: " << *max << '\n';

@@ -1,8 +1,9 @@
+#include <algorithm>
 #include <iostream>
 
 int main() {
     std::cout << "Minimum and maximum elements of array\n";
-    std::cout << "Custom implementation\n\n";
+    std::cout << "Standard library implementation\n\n";
 
     // Create array
     const int SIZE = 5;
@@ -16,25 +17,24 @@ int main() {
         std::cin >> nums[i];
     }
 
-    // Start at first element
-    int min = nums[0];
-    int max = nums[0];
-
+    // Display array
     std::cout << "\n[";
     for (int i = 0; i < SIZE; ++i) {
-        // Update min and max
-        if (nums[i] < min)
-            min = nums[i];
-        if (nums[i] > max)
-            max = nums[i];
-
-        // Display element
         std::cout << nums[i];
         if (i < SIZE - 1)
             std::cout << ", ";
     }
     std::cout << "]\n\n";
 
-    std::cout << "Min: " << min << '\n';
-    std::cout << "Max: " << max << '\n';
+    // Get minimum and maximum element
+    auto [min, max] = std::minmax_element(nums, nums + SIZE);
+
+    // Alternate method:
+    // int min = *std::min_element(nums, nums + SIZE);
+    // int max = *std::max_element(nums, nums + SIZE);
+    // std::cout << "Min: " << min << '\n';
+    // std::cout << "Max: " << max << '\n';
+
+    std::cout << "Min: " << *min << '\n';
+    std::cout << "Max: " << *max << '\n';
 }
