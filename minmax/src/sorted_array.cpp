@@ -2,8 +2,7 @@
 #include <iostream>
 
 int main() {
-    std::cout << "Minimum and maximum elements of array\n";
-    std::cout << "Custom implementation\n\n";
+    std::cout << "Minimum and maximum elements of sorted array\n\n";
 
     // Create array
     const int SIZE = 5;
@@ -28,6 +27,7 @@ int main() {
     }
     std::cout << "]\n\n";
 
+    // Getting the minimum and maximum is simple
     std::cout << "Min: " << nums[0] << '\n';
     std::cout << "Max: " << nums[SIZE - 1] << '\n';
 }
